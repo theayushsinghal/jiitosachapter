@@ -428,26 +428,26 @@ p {
 }
   /* End About section */
 
-/* Team Section */
-#team .team {
+/* Services Section */
+#services .services {
 	flex-direction: column;
 	text-align: center;
 	max-width: 1500px;
 	margin: 0 auto;
 	padding: 100px 0;
 }
-#team .team-top {
+#services .service-top {
 	max-width: 500px;
 	margin: 0 auto;
 }
-#team .team-bottom {
+#services .service-bottom {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
 	margin-top: 50px;
 }
-#teams .team-item1 {
+#services .service-item1 {
 	flex-basis: 80%;
 	display: flex;
 	justify-content: center;
@@ -463,7 +463,7 @@ p {
 	width: 300px;
 	height: 500px;
 }
-#team .team-item2 {
+#services .service-item2 {
 	flex-basis: 80%;
 	display: flex;
 	align-items: flex-start;
@@ -479,7 +479,7 @@ p {
 	overflow: hidden;
 	height: 500px;
 
-}#team .team-item3 {
+}#services .service-item3 {
 	flex-basis: 80%;
 	display: flex;
 	align-items: flex-start;
@@ -495,7 +495,7 @@ p {
 	overflow: hidden;
 	height: 500px;
 
-}#team .team-item4 {
+}#services .service-item4 {
 	flex-basis: 80%;
 	display: flex;
 	align-items: flex-start;
@@ -511,7 +511,7 @@ p {
 	overflow: hidden;
 	height: 500px;
 }
-#team .team-item::after {
+#services .service-item::after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -522,25 +522,25 @@ p {
 	opacity: .9;
 	z-index: -1;
 }
-#team .team-bottom .icon {
+#services .service-bottom .icon {
 	height: 80px;
 	width: 80px;
 	margin-bottom: 20px;
 }
-#team .team-item1 h1 {
+#services .service-item1 h1 {
 	font-size: 2rem;
 	color: white;
 	text-transform: uppercase;
 	margin-bottom: 10px;
 }
-#team .team-item2 h1 {
+#services .service-item2 h1 {
 	font-size: 2rem;
 	color: white;
 	text-transform: uppercase;
 	align-self: center;
 
 
-}#team .team-item3 h1 {
+}#services .service-item3 h1 {
 	font-size: 2rem;
 	color: white;
 	text-transform: uppercase;
@@ -548,7 +548,7 @@ p {
 	align-self: center;
 
 
-}#team .team-item4 h1 {
+}#services .service-item4 h1 {
 	font-size: 2rem;
 	color: white;
 	text-transform: uppercase;
@@ -556,31 +556,31 @@ p {
 	align-self: center;
 
 }
-#team .team-item p {
+#services .service-item p {
 	color: white;
 	text-align: left;
 }
-#team .member h4 {
+#services .member h4 {
 	font-weight: 700;
 	margin-bottom: 2px;
 	font-size: 18px;
 	color: #fff;
   }
-  #team .member p {
+  #services .member p {
 	margin-bottom: 0;
 	font-size: 13px;
 	color: #fff;
   }
   
-  #team .member span {
+  #services .member span {
 	font-style: italic;
 	display: block;
 	font-size: 15px;
 	color: #fff;
   }
-/* End Team Section */
+/* End Services Section */
 
-/* Activities section */
+/* Projects section */
 #projects .projects {
 	flex-direction: column;
 	max-width: 1200px;
@@ -651,7 +651,7 @@ p {
 #projects .project-item:hover .project-img img {
 	transform: scale(1.1);
 }
-/* End Activities section */
+/* End Projects section */
 
 /* About Section */
 #about .about {
