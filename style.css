@@ -5,14 +5,31 @@
 	box-sizing: border-box;
 
 }
+body::-webkit-scrollbar{
+	display: none;
+}
+body{
+	-ms-overflow-style:none;
+	scrollbar-width: none;
+}
+
+#scene{
+	overflow: hidden;
+}
+
+
 .containe
 {
+	isolation: isolate;
 	width: 100%;
 	height: 100vh;
 	background: url(img/space.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .mixBlnd
 {
@@ -97,12 +114,11 @@ p {
 	z-index: 1000;
 	left: 0;
 	top: 0;
-	width: 100vw;
+	width: 100%;
 	height: auto;
 }
 #header .header {
 	min-height: 8vh;
-	background-color: rgba(31, 30, 30, 0.24);
 	transition: .3s ease background-color;
 }
 #header .nav-bar {
@@ -220,7 +236,8 @@ p {
 
 /* Hero Section */
 #hero {
-	background-image: url(./img/bg-1.png);
+	isolation: isolate;
+	background: linear-gradient(45deg, black, transparent);
 	background-size: cover;
 	background-position: top center;
 	position: relative;
@@ -283,12 +300,20 @@ p {
 }
 
 /* End Hero Section */
+
+
+
+
 /* About Us Section
 --------------------------------*/
 
 #about {
-	padding: 80px 30px;
+	padding:0;
   }
+
+#about .containerr{
+	padding: 30px;
+}
   
   #about .about-content {
 	padding-top: 40px;
@@ -312,10 +337,7 @@ p {
 	padding: 0;
   }
   
-  #about .about-content ul li {
-	padding-bottom: 10px;
-  }
-  
+ 
   #about .about-content ul li i {
 	font-size: 29px;
 	padding-right: 4px;
@@ -448,137 +470,97 @@ p {
 	flex-wrap: wrap;
 	margin-top: 50px;
 }
-#services .service-item1 {
-	flex-basis: 80%;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
+
+#services .service-bottom > div{
+	position: relative;
 	padding: 30px;
 	border-radius: 10px;
-	background-image: url(./img/manan.jpg);
 	background-size: cover;
-	margin: 10px 5%;
-	position: relative;
+	margin: 25px 5%;
 	z-index: 1;
-	overflow: hidden;
 	width: 300px;
 	height: 500px;
+	background-position-x:center;
 }
-#services .service-item2 {
-	flex-basis: 80%;
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	flex-direction: column;
-	padding: 30px;
-	border-radius: 10px;
-	background-image: url(./img/vp.jpg);
-	background-size: cover;
-	margin: 10px 5%;
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
-	height: 500px;
 
-}#services .service-item3 {
-	flex-basis: 80%;
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	flex-direction: column;
-	padding: 30px;
-	border-radius: 10px;
-	background-image: url(./img/secretary.jpg);
-	background-size: cover;
-	margin: 10px 5%;
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
-	height: 500px;
 
-}#services .service-item4 {
-	flex-basis: 80%;
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	flex-direction: column;
-	padding: 30px;
-	border-radius: 10px;
-	background-image: url(./img/deeksha.jpg);
-	background-size: cover;
-	margin: 10px 5%;
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
-	height: 500px;
-}
-#services .service-item::after {
-	content: '';
+
+
+#services .service-bottom  .pop-up{
 	position: absolute;
-	left: 0;
 	top: 0;
-	height: 100%;
+	left: 0;
+	background-color: #4a6e86;
+	overflow: hidden;
 	width: 100%;
-	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	opacity: .9;
-	z-index: -1;
+	height:0;
+	transition: .5s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-#services .service-bottom .icon {
-	height: 80px;
-	width: 80px;
-	margin-bottom: 20px;
+
+#services .service-bottom  .pop-down{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #024b63;
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+	transition: .5s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-#services .service-item1 h1 {
-	font-size: 2rem;
-	color: white;
-	text-transform: uppercase;
-	margin-bottom: 10px;
+#services .service-bottom .service-item1{
+	background-image: url(./img/manan.jpg);
 }
-#services .service-item2 h1 {
-	font-size: 2rem;
-	color: white;
-	text-transform: uppercase;
-	align-self: center;
 
-
-}#services .service-item3 h1 {
-	font-size: 2rem;
-	color: white;
-	text-transform: uppercase;
-	margin-bottom: 0px;
-	align-self: center;
-
-
-}#services .service-item4 h1 {
-	font-size: 2rem;
-	color: white;
-	text-transform: uppercase;
-	margin-bottom: 10px;
-	align-self: center;
-
+#services .service-bottom .service-item1:hover .pop-up{
+	height: 10%;
 }
-#services .service-item p {
-	color: white;
-	text-align: left;
+
+#services .service-bottom .service-item1:hover .pop-down{
+	height: 10%;
 }
-#services .member h4 {
-	font-weight: 700;
-	margin-bottom: 2px;
-	font-size: 18px;
-	color: #fff;
-  }
-  #services .member p {
-	margin-bottom: 0;
-	font-size: 13px;
-	color: #fff;
-  }
-  
-  #services .member span {
-	font-style: italic;
-	display: block;
-	font-size: 15px;
-	color: #fff;
-  }
+
+#services .service-bottom .service-item2{
+	background-image: url(./img/vp.jpg);
+}
+
+#services .service-bottom .service-item2:hover .pop-up{
+	height: 10%;
+}
+
+#services .service-bottom .service-item2:hover .pop-down{
+	height: 10%;
+}
+
+#services .service-bottom .service-item3{
+	background-image: url(./img/secretary.jpg);
+}
+
+#services .service-bottom .service-item3:hover .pop-up{
+	height: 10%;
+}
+
+#services .service-bottom .service-item3:hover .pop-down{
+	height: 10%;
+}
+
+#services .service-bottom .service-item4{
+	background-image: url(./img/deeksha.jpg);
+}
+
+#services .service-bottom .service-item4:hover .pop-up{
+	height: 10%;
+}
+
+#services .service-bottom .service-item4:hover .pop-down{
+	height: 10%;
+}
 /* End Services Section */
 
 /* Projects section */
@@ -644,7 +626,7 @@ p {
 	height: 100%;
 	width: 100%;
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-	opacity: .5;
+	opacity: .001;
 }
 #projects .project-img img {
 	transition: .3s ease transform;
@@ -708,9 +690,6 @@ p {
 	max-width: 1200px;
 	margin: 0 auto;
 }
-#contact .contact-items {
-	width: 400px;
-}
 #contact .contact-item {
 	width: 80%;
 	text-align: center;
@@ -742,6 +721,15 @@ p {
 	line-height: 2rem;
 	font-weight: 500;
 }
+
+#location{
+	isolation: isolate;
+	margin: 20px;
+	background: #000;
+	width: 90%;
+	height: 400px;
+}
+
 /*End contact Section */
 
 /* Footer */
@@ -753,6 +741,9 @@ p {
 	flex-direction: column;
 	padding-top: 50px;
 	padding-bottom: 10px;
+}
+.brand{
+	text-align: center;
 }
 #footer h2 {
 	color: white;
@@ -834,6 +825,11 @@ p {
 	}
 	/* End Hero */
 
+	
+#hero-pic div{
+	padding: 50px;
+}
+
 	/* Services Section */
 	#services .service-bottom .service-item {
 		flex-basis: 45%;
@@ -863,6 +859,15 @@ p {
 	/* End Project */
 
 	/* About */
+
+	#about{
+		padding: 80px 30px;
+	}
+
+	#about .containerr{
+		padding: 150px;
+	}
+
 	#about .about {
 		flex-direction: row;
 	}
