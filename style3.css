@@ -13,24 +13,6 @@ body{
 	scrollbar-width: none;
 }
 
-#scroll_top{
-	display: none;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    background: red;
-    width: 35px;
-    height: 35px;
-    color: white;
-    cursor: pointer;
-    z-index: 100000;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-    border-radius: 50%;
-    font-weight: bold;
-}
-
 
 .img_slider{
 	display: flex;
@@ -38,70 +20,25 @@ body{
     width: 100%;
     height: 100%;
     object-fit: contain;
-	overflow: hidden;
-}
-
-.img_slider img{
 	opacity: 0.5;
-}
-
-.img_slider p{
-	max-width: 300px;
-    position: absolute;
-	color: white;
-	bottom: 25px;
-}
-
-
-.slide-caption{
-	-webkit-animation-name: slide-caption;
-	-webkit-animation-duration: 5s;
-	animation-name: slide-caption;
-	animation-duration: 5s;
-	animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes slide-caption{
-	from{
-		right: -300px;
-	}
-	to{
-		right: 10px;
-	}
-}
-
-@keyframes slide-caption{
-	from{
-		right: -300px;
-	}
-	to{
-		right: 10px;
-	}
+	overflow: hidden;
 }
 
 .fade {
 	-webkit-animation-name: fade;
-	-webkit-animation-duration: 5s;
+	-webkit-animation-duration: 2s;
 	animation-name: fade;
-	animation-duration: 5s;
+	animation-duration: 2s;
   }
   
   @-webkit-keyframes fade {
-	from {
-		transform:scale(0.9);
-	} 
-	to {
-		transform: rotate(0.002deg) scale(1);
-	}
+	from {opacity: .0} 
+	to {opacity: 0.5}
   }
   
   @keyframes fade {
-	from {
-		transform:  scale(0.9);
-	} 
-	to {
-		transform: rotate(0.002deg) scale(1);
-	}
+	from {opacity: .0} 
+	to {opacity: 0.5}
   }
 
 .modal {
@@ -172,12 +109,11 @@ body{
 {
 	isolation: isolate;
 	width: 100%;
-	height: 50vh;
-	background: url(img/bg-1.png);
+	height: 100vh;
+	background: url(img/space.png);
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 	background-attachment: fixed;
-	background-position-y: center;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -271,6 +207,7 @@ p {
 #header .header {
 	min-height: 8vh;
 	transition: .3s ease background-color;
+	background-color:#003049 ;
 }
 #header .nav-bar {
 	display: flex;
@@ -327,9 +264,8 @@ p {
 	letter-spacing: initial;
 }
 #header .nav-list ul li:hover a {
-	color: rgb(0, 35, 87);
-	background-color: #0abbe7;
-}
+    color: rgb(0, 35, 87);
+	background-color: #0abbe7;}
 #header .hamburger {
 	height: 60px;
 	width: 60px;
@@ -416,7 +352,7 @@ p {
 #hero h1 {
 	display: block;
 	width: fit-content;
-	font-size: 3rem;
+	font-size: 4rem;
 	position: relative;
 	color: transparent;
 	animation: text_reveal .5s ease forwards;
@@ -459,20 +395,8 @@ p {
 
 /* About Us Section
 --------------------------------*/
-.videoWrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	height: 0;
-  }
-  .videoWrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 90%;
-  }
+
 #about {
-	background: #81ecec;
 	padding:0;
   }
 
@@ -480,20 +404,6 @@ p {
 	padding: 30px;
 }
   
-
-#about .containerr p{
-	overflow: hidden;
-	max-height: 100px;	
-}
-
-#about .containerr .ReadMore{
-	margin-top: 10px;
-	background-color: pink;
-	padding: 5px;
-	text-align: center;
-	border: none;
-	}
-
   #about .about-content {
 	padding-top: 40px;
   }
@@ -587,16 +497,50 @@ p {
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
+.principal{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	letter-spacing: 5px;
+	text-align: center;
+}
+.principal h1{
+	font-size: 70px;
+	margin-bottom: 20px;
+}
+.principal h2{
+	text-transform: capitalize;
+	font-size: 20px;
+	color: #fff;
+}
+
+.details h2 span:nth-child(1){
+	color: red;
+}
+
+.details h2 span:nth-child(2){
+	color: yellow;
+}
 
 
-
-
+@keyframes slide{
+	0%,100%{
+		background-image: url(img/1.png);
+	}
+	25%{
+		background-image: url(img/2.png);
+	}
+	50%{
+		background-image: url(img/3.png);
+	}
+	75%{
+		background-image: url(img/4.png);
+	}
+}
   /* End About section */
 
 /* Services Section */
-#services{
-	background: #81ecec;
-}
 #services .services {
 	flex-direction: column;
 	text-align: center;
@@ -604,16 +548,6 @@ p {
 	margin: 0 auto;
 	padding: 100px 0;
 }
-
-#services .services button{
-	color: white;
-    padding: 8px;
-    border: none;
-	border-radius: 5px;
-	background-color: #6c5ce7;
-	
-}
-
 #services .service-top {
 	max-width: 500px;
 	margin: 0 auto;
@@ -719,9 +653,6 @@ p {
 /* End Services Section */
 
 /* Projects section */
-#projects{
-	background: #00cec9;
-}
 #projects .projects {
 	flex-direction: column;
 	max-width: 1200px;
@@ -743,38 +674,52 @@ p {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	width: 90%;
+	width: 80%;
 	margin: 20px auto;
 	overflow: hidden;
 	border-radius: 10px;
 }
 #projects .project-info {
 	padding: 30px;
+	height: 100%;
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 	color: white;
 }
 #projects .project-info h1 {
-	font-size: 25px;
+	font-size: 4rem;
+	font-weight: 500;
 }
 #projects .project-info h2 {
-	font-size: 15px;
+	font-size: 1.8rem;
+	font-weight: 500;
 	margin-top: 10px;
 }
 #projects .project-info p {
-	max-height: 100px;
-	overflow: hidden;
 	color: white;
+	font-size: small;
 }
-
-#projects .project-item .ReadMore{
-margin-top: 10px;
-background-color: pink;
-padding: 5px;
-text-align: center;
-border: none;
+#projects .project-img {
+	flex-basis: 50%;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
 }
-
-
+#projects .project-img:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: .001;
+}
+#projects .project-img img {
+	transition: .3s ease transform;
+}
+#projects .project-item:hover .project-img img {
+	transform: scale(1.1);
+}
 /* End Projects section */
 
 /* About Section */
@@ -826,9 +771,6 @@ border: none;
 /* End About Section */
 
 /* contact Section */
-#contact{
-	background: #00cec9;
-}
 #contact .contact {
 	flex-direction: column;
 	max-width: 1200px;
@@ -869,51 +811,6 @@ border: none;
 	font-size: 1.3rem;
 	line-height: 2rem;
 	font-weight: 500;
-}
-
-.form_map_con{
-	margin-top: 50px;
-	padding: 10px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.form_map_con .from_con{
-	width: 90%;
-    border: 2px solid silver;
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.form_map_con .from_con form{
-display: flex;
-flex-direction: column;
-}
-
-
-.form_map_con form input[type='text'],input[type='email'],input[type='number']{
-	padding: 5px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-.form_map_con .from_con form textarea{
-	margin-top: 10px;
-	padding: 5px;
-	max-width: 100%;
-	min-width: 100%;
-	min-height: 50px;
-	max-height: 100px;
-}
-
-.form_map_con form button{
-margin-top: 10px;
-padding: 5px;
-    border: none;
-    background: deepskyblue;
-    color: white;
 }
 
 #location{
@@ -1002,13 +899,7 @@ padding: 5px;
 	}
 }
 /* End Keyframes */
-@media only screen and (min-width: 300px) {
-	
-	/* Hero */
-	#hero h1 {
-		font-size: 3.9em;
-	}
-}
+
 /* Media Query For Tablet */
 @media only screen and (min-width: 768px) {
 	.cta {
@@ -1045,25 +936,16 @@ padding: 5px;
 		flex-direction: row-reverse;
 	}
 	#projects .project-item {
-		height: 500px;
+		height: 400px;
 		margin: 0;
 		width: 100%;
 		border-radius: 0;
 	}
-
-	#projects .project-info p {
-		max-height: fit-content;
-	}
-
 	#projects .all-projects .project-info {
 		height: 100%;
 	}
 	#projects .all-projects .project-img {
 		height: 100%;
-	}
-
-	#projects .project-item .ReadMore{
-		display: none;
 	}
 	/* End Project */
 
@@ -1104,24 +986,21 @@ padding: 5px;
 	/* contact  */
 	#contact .contact {
 		flex-direction: column;
-		padding:50px 0;
+		padding: 100px 0;
 		align-items: center;
 		justify-content: center;
 		min-width: 20vh;
 	}
-
-	#services .services button{
-		width: 40%;
-	}
 	#contact .contact-items {
+		width: 100%;
 		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		flex-direction: row;
+		justify-content: space-evenly;
+		margin: 0;
 	}
 	#contact .contact-item {
-		width: 50%;
-		margin: 10px;
+		width: 30%;
+		margin: 0;
 		flex-direction: row;
 	}
 	#contact .contact-item .icon {
@@ -1137,17 +1016,6 @@ padding: 5px;
 		padding-left: 20px;
 	}
 	/* End contact  */
-
-	#scroll_top{
-		bottom: 35px;
-		right: 35px;
-		width: 40px;
-		height: 40px;
-	}
-
-	.form_map_con{
-		flex-direction: row;
-	}
 }
 /* End Media Query For Tablet */
 
@@ -1174,10 +1042,6 @@ padding: 5px;
 		display: none;
 	}
 	/* End header */
-
-	.containe{
-		height: 100vh;
-	}
 
 	#services .service-bottom .service-item {
 		flex-basis: 22%;
@@ -1206,79 +1070,58 @@ padding: 5px;
 		max-height: 600px;
 		height: auto;
 	  }
-
-	  .img_slider .slide-caption{
-		  max-width: 450px;
-	  }
-
-	  @-webkit-keyframes slide-caption{
-		from{
-			right: -450px;
-		}
-		to{
-			right: 100px;
-		}
-	}
 	
-	@keyframes slide-caption{
-		from{
-			right: -450px;
-		}
-		to{
-			right: 100px;
-		}
-	}
-
-	#contact .contact-items {
-		width: 100%;
-		align-items: center;
-		justify-content: space-evenly;
-		display: flex;
-		flex-direction: row;
-		margin-top: 10px;
-	}
-
-	#projects .project-item {
-		max-height: 400px;
-	}
-
-	#projects .project-info h1 {
-		font-size: 4rem;
-	}
-
-
-	#projects .project-info p {
-		max-height: fit-content;
-	}
-
-	#projects .project-item .ReadMore{
-		display: none;
-	}
-
-	#about .containerr p{
-		max-height: fit-content;
-	}
-	#about .containerr .ReadMore{
-		display: none;
-	}
-	#scroll_top{
-		bottom: 50px;
-		right: 50px;
-		width: 50px;
-		height: 50px;
-	}
-
-	#services .services button{
-		width: 40%;
-	}
-
-	.form_map_con{
-		width: 80%;
-		flex-direction: row;
-	}
-
-	.form_map_con form button{
-		padding: 10px;
-	}
 }
 /* End  Media Query For Desktop */
+
+/* bg color*/
+body #projects
+{
+	background-image: linear-gradient(to left,#80e5ff,
+  #00a3cc)
+}
+/*end bg color*/
+
+/*for active link in nav bar*/
+.active{
+	background-color:#F77F00; 
+		}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+  font-size: large;
+  font-weight: bolder;
+  
+
+}		
+
+/*back to top*/
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color:	 #0039e6 ; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color:  #4d4dff; 
+}
+
+/*back to top end*/
