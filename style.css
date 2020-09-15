@@ -610,8 +610,8 @@ p {
     padding: 8px;
     border: none;
 	border-radius: 5px;
-	background-color: #6c5ce7;
-	
+	background-color: #5fb8be;
+	width: 15%;
 }
 
 #services .service-top {
@@ -1111,7 +1111,7 @@ padding: 5px;
 	}
 
 	#services .services button{
-		width: 40%;
+		width: 15%;
 	}
 	#contact .contact-items {
 		display: flex;
@@ -1269,7 +1269,7 @@ padding: 5px;
 	}
 
 	#services .services button{
-		width: 40%;
+		width: 15%;
 	}
 
 	.form_map_con{
