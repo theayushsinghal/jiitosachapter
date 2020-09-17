@@ -488,7 +488,7 @@ p {
 
 #about .containerr .ReadMore{
 	margin-top: 10px;
-	background-color: pink;
+	background-color: rgb(192, 230, 255);
 	padding: 5px;
 	text-align: center;
 	border: none;
@@ -607,10 +607,11 @@ p {
 
 #services .services button{
 	color: white;
+	text-decoration: none;
     padding: 8px;
     border: none;
 	border-radius: 5px;
-	background-color: #6c5ce7;
+	background-color: #a5cbd6;
 	
 }
 
@@ -768,12 +769,21 @@ p {
 
 #projects .project-item .ReadMore{
 margin-top: 10px;
-background-color: pink;
+background-color: rgb(192, 230, 255);
 padding: 5px;
 text-align: center;
 border: none;
 }
 
+#projects .projects button{
+	color: white;
+	text-decoration: none;
+    padding: 8px;
+    border: none;
+	border-radius: 5px;
+	background-color: #c7d7db;
+	
+}
 
 /* End Projects section */
 
