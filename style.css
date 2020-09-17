@@ -611,8 +611,9 @@ p {
     padding: 8px;
     border: none;
 	border-radius: 5px;
-	background-color: #a5cbd6;
 	
+	background-color: #5fb8be;
+	width: 30%;
 }
 
 #services .service-top {
@@ -1121,7 +1122,7 @@ padding: 5px;
 	}
 
 	#services .services button{
-		width: 40%;
+		width: 30%;
 	}
 	#contact .contact-items {
 		display: flex;
@@ -1279,7 +1280,7 @@ padding: 5px;
 	}
 
 	#services .services button{
-		width: 40%;
+		width: 30%;
 	}
 
 	.form_map_con{
