@@ -16,16 +16,6 @@
     <span onclick="changeScroll()">^</span>
   </div>
 
-  
-  <script>
-    
-    function changeScroll(){
-      console.log("dfdf");
-      document.documentElement.scrollTop = 0;
-    }
-  </script>
-
-
   <!-- The Modal -->
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
@@ -242,7 +232,9 @@
             </p>
             <button class="ReadMore" onclick="read_more(this,4)">Read More</button>
           </div>
-          <img src="./img/5.png" alt="img" id="openBig" onclick="show_big(this)">
+          <div>
+            <img src="./img/5.png" alt="img" id="openBig" onclick="show_big(this)">
+          </div>
         </div>
         <div class="project-item">
           <div class="project-info">
@@ -257,7 +249,9 @@
             </p>
             <button class="ReadMore" onclick="read_more(this,5)">Read More</button>
           </div>
+          <div>
           <img src="./img/6.png" alt="img" id="openBig" onclick="show_big(this)">
+          </div>
         </div>
         <div class="project-item">
           <div class="project-info">
@@ -268,7 +262,9 @@
               and the benefits of becoming an OSA member.</p>
               <button class="ReadMore" onclick="read_more(this,6)">Read More</button>
           </div>
-          <img src="./img/7.png" alt="img" id="openBig" onclick="show_big(this)">
+          <div>
+            <img src="./img/7.png" alt="img" id="openBig" onclick="show_big(this)">
+          </div>
         </div>
 
 
@@ -285,7 +281,9 @@
               believe in the self.</p>
               <button class="ReadMore" onclick="read_more(this,7)">Read More</button>
           </div>
-          <img src="./img/8.png" alt="img" id="openBig" onclick="show_big(this)">
+          <div>
+            <img src="./img/8.png" alt="img" id="openBig" onclick="show_big(this)">
+          </div>
         </div>
         <div class="project-item">
           <div class="project-info">
@@ -300,7 +298,9 @@
               and engaging.</p>
               <button class="ReadMore" onclick="read_more(this,8)">Read More</button>
           </div>
-          <img src="./img/9.png" alt="img" id="openBig" onclick="show_big(this)">
+          <div>
+            <img src="./img/9.png" alt="img" id="openBig" onclick="show_big(this)">
+          </div>
         </div>
         <div class="project-item">
           <div class="project-info">
@@ -314,7 +314,9 @@
               bagged the special mention award. Both the teams presented their posters on Quantum Computing.</p>
               <button class="ReadMore" onclick="read_more(this,9)">Read More</button>
           </div>
-          <img src="./img/10.png" alt="img" id="openBig" onclick="show_big(this)">
+          <div>
+            <img src="./img/10.png" alt="img" id="openBig" onclick="show_big(this)">
+          </div>
         </div>
         <div class="project-item">
           <div class="project-info">
@@ -325,7 +327,9 @@
               The use of Adobe Photoshop as a design tool and the insights to make good infographics were also taught.</p>
               <button class="ReadMore" onclick="read_more(this,10)">Read More</button>
           </div>
-          <img src="./img/11.png" alt="img" id="openBig" onclick="show_big(this)"/>
+          <div>
+            <img src="./img/11.png" alt="img" id="openBig" onclick="show_big(this)"/>
+          </div>
         </div>
       </div>
       <br><br>
@@ -497,6 +501,9 @@
       }else{
         scroll.style.display = "none";
       }
+    }
+    function changeScroll(){
+      document.documentElement.scrollTop = 0;
     }
     
     </script>
