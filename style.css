@@ -472,7 +472,6 @@ p {
 	height: 90%;
   }
 #about {
-	background: #81ecec;
 	padding:0;
   }
 
@@ -594,15 +593,12 @@ p {
   /* End About section */
 
 /* Services Section */
-#services{
-	background: #81ecec;
-}
 #services .services {
 	flex-direction: column;
 	text-align: center;
 	max-width: 1500px;
 	margin: 0 auto;
-	padding: 100px 0;
+	padding: 50px 0;
 }
 
 #services .services button{
@@ -721,14 +717,11 @@ p {
 /* End Services Section */
 
 /* Projects section */
-#projects{
-	background: #00cec9;
-}
 #projects .projects {
 	flex-direction: column;
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: 0 auto;
-	padding: 100px 0;
+	padding: 50px 0;
 }
 #projects .projects-header h1 {
 	margin-bottom: 50px;
@@ -777,7 +770,6 @@ border: none;
 }
 
 #projects .projects button{
-	color: white;
 	text-decoration: none;
     padding: 8px;
     border: none;
@@ -794,7 +786,7 @@ border: none;
 	text-align: center;
 	max-width: 1200px;
 	margin: 0 auto;
-	padding: 100px 20px;
+	padding: 100px 0px;
 }
 #about .col-left {
 	width: 250px;
@@ -837,9 +829,6 @@ border: none;
 /* End About Section */
 
 /* contact Section */
-#contact{
-	background: #00cec9;
-}
 #contact .contact {
 	flex-direction: column;
 	max-width: 1200px;
@@ -1051,23 +1040,40 @@ padding: 5px;
 	/* Project */
 	#projects .project-item {
 		flex-direction: row;
+		margin: 0%;
+		height: 550px;
+		width: 100%;
+		border-radius: 0;
 	}
 	#projects .project-item:nth-child(even) {
 		flex-direction: row-reverse;
 	}
-	#projects .project-item {
-		height: 500px;
-		margin: 0;
+
+	#projects .project-item div{
+		height: 100%;
+		flex: 1;
+	}
+	#projects .project-item div img{
 		width: 100%;
-		border-radius: 0;
+		height: 100%;
+		object-fit: cover;
+	}
+	#projects .project-info h1 {
+		font-size: 40px;
+		margin: 30px;
 	}
 
+	#projects .project-info h2 {
+		margin-left: 30px;
+	}
 	#projects .project-info p {
+		margin-left: 30px;
 		max-height: fit-content;
 	}
 
 	#projects .all-projects .project-info {
 		height: 100%;
+		padding: 0%;
 	}
 	#projects .all-projects .project-img {
 		height: 100%;
@@ -1081,11 +1087,11 @@ padding: 5px;
 	/* About */
 
 	#about{
-		padding: 80px 30px;
+		padding: 80px 0px;
 	}
 
 	#about .containerr{
-		padding: 150px;
+		padding:0px  150px;
 	}
 
 	#about .about {
@@ -1240,6 +1246,11 @@ padding: 5px;
 		}
 	}
 
+	#projects .project-item {
+	height: 420px;
+	}
+
+
 	#contact .contact-items {
 		width: 100%;
 		align-items: center;
@@ -1247,23 +1258,6 @@ padding: 5px;
 		display: flex;
 		flex-direction: row;
 		margin-top: 10px;
-	}
-
-	#projects .project-item {
-		max-height: 400px;
-	}
-
-	#projects .project-info h1 {
-		font-size: 4rem;
-	}
-
-
-	#projects .project-info p {
-		max-height: fit-content;
-	}
-
-	#projects .project-item .ReadMore{
-		display: none;
 	}
 
 	#about .containerr p{
