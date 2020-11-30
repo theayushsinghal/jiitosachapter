@@ -1114,6 +1114,9 @@ flex-direction: column;
 	color: white;
 
 }
+#footer a{
+	color: white;
+}
 /* End Footer */
 
 /* Keyframes */

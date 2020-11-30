@@ -32,6 +32,7 @@ body{
   	-ms-overflow-style:none;
   scrollbar-width: none;
   max-width: 1240 px;
+  background:url("./img/80.-Dusty-blue.jpg");
 }
 
 
@@ -153,7 +154,7 @@ a:hover{
   border-radius: 50%;
   height:450px;
   width: 500px;
-  background-size: cover;
+  object-fit: cover;
 }
 .team-member figure:hover figcaption ul li a:hover {
   color: rgba(49, 49, 49, .97);
@@ -296,15 +297,15 @@ a:hover{
 }
 
 @keyframes bg {
-  0% {background: #ff0075;}
-  3% {background: #0094ff;}
-  20% {background: #0094ff;}
-  23% {background: #b200ff;}
-  40% {background: #b200ff;}
-  43% {background: #8BC34A;}
-  60% {background: #8BC34A;}
-  63% {background: #F44336;}
-  80% {background: #F44336;}
-  83% {background: #F44336;}
-  100% {background: #F44336;}
+  0% {color: #ff0075;}
+  3% {color: #011f35;}
+  20% {color: #0094ff;}
+  23% {color: #520175;}
+  40% {color: #b200ff;}
+  43% {color: #2a4b05;}
+  60% {color: #8BC34A;}
+  63% {color: #F44336;}
+  80% {color: #530600;}
+  83% {color: #740800;}
+  100% {color: #F44336;}
 }
