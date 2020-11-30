@@ -1107,6 +1107,12 @@ flex-direction: column;
 #footer p {
 	color: white;
 	font-size: 1.3rem;
+	text-decoration: none;
+}
+#footer h4{
+	text-decoration: none;
+	color: white;
+
 }
 /* End Footer */
 
